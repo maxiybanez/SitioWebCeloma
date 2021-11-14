@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <title>CELOMA TECNOLOGIA</title>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <img src="imagenes/simbolo2.jpg"><h3>Celoma Tecnologia</h3>      
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="Contactos.html">Contacto</a></li>
+            <a class="facebook" href="https://www.facebook.com/celomatecnologia/"><img src="imagenes/icons8-facebook-48.png"></a>
+            <a class="facebook" href="https://www.instagram.com/celomatecnologia/"><img src="imagenes/icons8-instagram-48.png"></a>
+        </ul>  
+    </header>
+
+    <div class="frase">
+        <p><strong>Contacta con nosotros, dejanos tus datos.</strong></p>
+    </div> 
+    
+    <div class="informacion">
+        
+        <p> Si queres información sobre cualquiera de nuestros servicios,<br>
+            rellena nuestro formulario y nos pondremos en contacto contigo lo antes posible.<br>
+            <br>
+            <strong>Muchas Gracias</strong><br>
+            <br>
+            <strong>Sede central:</strong> Arancibia rodriguez 363- San luis - Capital- Argentina<br>
+            <br>
+            <strong>Teléfono:</strong> (+54) 266 4014631<br>
+            <br>
+            <strong>E-mail:</strong> maximiliano.ybanez@gmail.com<br>
+            <br>
+        </p>
+        <a href="https://goo.gl/maps/mHxMW1XmmsLLw2dQ7"><img src="imagenes/icons8-ubicación-en-todo-el-mundo-48.png"></a>
+    </div>
+
+
+    <form onsubmit="return validar()" class="formulario" name="formulario" id="formulario">
+        <h4>Formulario de contacto</h4>
+        
+        <input type="text" class="box" id= "nombre" name="nombre" placeholder="Ingrese su nombre y apellido">
+        <label id="errorNombre"> </label>
+
+        <input type="text" class="box" id= "telefono" name="telefono" placeholder="Ingrese su numero de telefono">
+        <label id="errorTelefono"> </label>
+
+        <input type="text" class="box" id= "mail" name="mail" placeholder="Ingrese su E-mail">
+        <label id="errorMail"> </label>
+       
+        <textarea name="mensaje" class="box" id="mensaje" class="Mensaje" placeholder="Ingrese su mensaje" cols="30" rows="10"></textarea>
+        <label id="errorMSJ"> </label>
+    
+        <input type="submit" value="Enviar" class="boton">
+    
+    </form>
+<div class="visitas">
+    <h3 id="enviados"> </h3>
+    <ul id="lista">
+    </ul>
+</div>
+
+<script>
+    
+    function validar(){
+    debugger;
+    var nombre = document.getElementById("nombre").value;
+    var telefono = document.getElementById("telefono").value;
+    var mail = document.getElementById("mail").value;
+    var expresion = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-z]{2,4})+$/;
+    var mensaje= document.getElementById("mensaje").value;
+    var arregloErrores= [];   
+    //----------------------------------------------------------------------------------validacion del nombre
+    if(nombre=="" || nombre.length > 20){
+        arregloErrores.push("Revise su nombre ");
+        document.getElementById("errorNombre").innerHTML= "Ingrese su nombre, este no debe tener mas a 20 caracteres";
+        document.getElementById("errorNombre").style.color =  "red";
+        document.getElementById("nombre").style.border= "2px solid red";
+        document.getElementById("nombre").focus();
+    }else{
+        document.getElementById("errorNombre").innerHTML= "";
+        document.getElementById("nombre").style.border= "";
+    }
+    //----------------------------------------------------------------------------------validacion de la edad
+    if(telefono==''){
+        arregloErrores.push("Revise su edad ");
+        document.getElementById("errorTelefono").innerHTML= "Debe ingresar un numero entero";
+        document.getElementById("errorTelefono").style.color =  "red";
+        document.getElementById("telefono").style.border= "2px solid red";
+        document.getElementById("telefono").focus();
+        }else{
+        document.getElementById("errorTelefono").innerHTML= "";
+        document.getElementById("telefono").style.border= "";
+        }
+  
+    //----------------------------------------------------------------------------------validacion del e-mail
+    if(!expresion.test(mail) || mail=="" ){
+        arregloErrores.push("Revise el mail");
+        document.getElementById("errorMail").innerHTML= "El e-mail debe contener '@aaaa.com'";
+        document.getElementById("errorMail").style.color =  "red";
+        document.getElementById("mail").style.border= "2px solid red";
+        document.getElementById("mail").focus();
+    }else{
+        document.getElementById("errorMail").innerHTML= "";
+        document.getElementById("mail").style.border= "";
+    }
+    //----------------------------------------------------------------------------------validacion del mensaje
+    if(mensaje.length <1 || mensaje.length > 200){
+        arregloErrores.push("Revise su mensaje supera los caracteres permitidos");
+        document.getElementById("errorMSJ").innerHTML= " El mensaje no debe superar los 200 caracteres o tener al menos un caracter "
+        document.getElementById("errorMSJ").style.color= "red";
+        document.getElementById("mensaje").style.border= "2px solid red";
+        document.getElementById("mensaje").focus();
+    }else{
+        document.getElementById("errorMSJ").innerHTML= "";
+        document.getElementById("mensaje").style.border= "";
+    }
+    
+     //----------------------------------------------------------------------------------chequeo que no haya erres.
+    if(arregloErrores.length == 0) {
+        document.getElementById("enviados").innerHTML="Visitas";
+        let li = document.createElement('li');
+        let lista = document.getElementById("lista");
+        li.innerHTML= "Contactar a "+ nombre + " ,numero de telefon es: "+ telefono +" su mail "+mail+" dejo un mensaje "+ mensaje;
+        lista.appendChild(li);
+        var aceptar = confirm("El mensaje fue enviado correctamente");
+        return false; 
+    }else{
+        return false;
+    }
+    
+    return false;
+}
+</script>
+
+    
+
+
+</body>
+</html>

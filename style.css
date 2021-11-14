@@ -1,0 +1,335 @@
+/*--------------------------------------Menu---------------------*/
+body{
+    font-size: 20px;
+    margin: 0;
+    min-height: 100vh;
+    background-attachment: scroll; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-image: url("fondo2-jpg.jpg");
+    font-family: 'Cairo', sans-serif;
+}
+body::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    min-height: 200vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*background-image: linear-gradient(rgb(121, 115, 143), white );*/  
+    opacity: 0.7;
+    z-index: -1;
+}    
+.header{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    
+}
+.menu {
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+   
+}
+.menu li:hover{
+    color:white;    
+    background-color: rgb(5, 5, 66);
+    
+}
+.menu li a {
+display:flex;
+padding: 17px 50px;
+text-decoration: none;
+font-size: 25px;
+
+}
+.facebook{
+    float:right;
+}
+/*--------------------------------------Index--------------------*/
+h3{
+    text-align: center;
+    color:black ;
+}
+.intruduccion{
+    width: 100%;
+    border: 3px outset rgb(15, 24, 110);
+    box-sizing: border-box;
+   
+}
+.intruduccion img{
+    min-width: auto;
+    width: 100%;
+    max-height: 450px   ;
+    position: relative;
+}
+.text{
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+    position: absolute;
+    top: 95px;
+    left:150px;
+    background-image: linear-gradient(rgba(15, 25, 110, 0.87), black );
+    z-index: 1;
+    width: 25%;
+    height: 64%;
+    max-height: 100%   ;    
+}
+.a{
+    background-image: linear-gradient(rgba(98, 104, 161, 0.979), white);
+    color:rgba(15, 25, 110, 0.87);
+    padding: 20px;
+    
+}
+.Visionimg{
+        float: right;
+        height: 80px;
+        padding: 10px;
+}
+.a h5{
+   font-size: 25px;
+   text-align: center;
+   padding-left: 10px;
+}
+.a p{
+     font-size: 20px;
+    padding-left: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+.b{
+  
+    color:rgba(15, 25, 110, 0.87);
+    padding: 20px;
+}
+.preguntaimg{
+    float: right;
+    height: 80px;
+    padding: 10px;
+}
+.b h5{
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+ }
+.b p{
+    
+    font-size: 20px;
+    padding-left: 10px;
+    text-align: left;
+    
+}
+.c{
+    background-image: linear-gradient( white,rgba(98, 104, 161, 0.979) );
+    color:rgba(20, 24, 121, 0.837);
+    padding: 20px;
+   
+}
+.valoresimg{
+    float: left;
+    height: 80px;
+    padding: 10px;
+}
+.c h5{
+    
+    font-size: 25px;
+    text-align: center;
+}
+.c p{
+    
+    font-size: 20px;
+    padding-left: 20px;
+    text-align: left;
+}
+.imglogo{
+    float: right;
+} 
+
+/*--------------------------------------Servicio--------------------*/
+.textServicio{
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    text-align: center;
+    position: absolute;
+    top: 95px;
+    left:150px;
+    background-image: linear-gradient(rgba(15, 25, 110, 0.87), black );
+    z-index: 1;
+    width: 25%;
+    height: 64%;
+    max-height: 100%   ;    
+}
+.asesoramientoFinServicio{
+    background-image: linear-gradient(rgba(98, 104, 161, 0.979), white ); 
+    color:white;
+    padding: 20px;
+}
+.Titulo{
+    text-align: center;
+    font-size: 35px;
+}
+.imgAsesoramientoFinanciero{
+    float:right;
+}
+.asesoramientoTrasnDigital{
+     color:rgba(15, 25, 110, 0.87);
+    padding: 20px;
+}
+.Parrafo{
+    text-align: left;
+    font-size: 20px;
+    padding-left:50px;
+    color:rgba(15, 25, 110, 0.87);
+}
+.TituloD{
+    text-align: center;
+    font-size: 35px;
+    color: rgba(15, 25, 110, 0.87);
+}
+.digitalizacionDocu{
+    background-image: linear-gradient( white,rgba(98, 104, 161, 0.979) );
+    color:white;
+    padding: 20px;
+}
+.digital{
+    float:left;
+}
+/*-------------------------------------Contacto----------------------*/
+form{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    box-sizing: border-box;
+}
+.formulario{
+    width: 400px;
+    background-color: rgba(2, 61, 93);
+    padding: 35px;
+    margin: auto;
+    margin-top: 100px;  
+    margin-left: 0%;
+    
+    border-radius: 4px;
+    font-family: 'calibri';
+    box-shadow: 7px 13px 37px ;
+      }
+.frase{
+    height: 250px;
+    background-image: linear-gradient(rgba(15, 25, 110, 0.87), white );
+}
+.frase p{
+    color: black;
+    position: absolute;
+    font-size: 30px;
+    top: 20%;
+    left: 10%;
+}
+.informacion{
+    height: 300px;
+    padding-left: 20px;
+    color: rgba(15, 25, 110, 0.87);
+    text-align: left;
+    font-size: 25px;
+    top: 180%;
+    left: 25%;
+}
+.formulario h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+.box{
+    width: 95%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-top: 15px;
+    margin-right: 35px;
+    border:1px solid brown;
+    font-family: 'calibri';
+    }
+.boton{
+        width: 100%;
+        border:none;
+        padding: 12px;
+        margin:auto;
+        margin-top: 15px;
+    }
+.visitas{
+        font-family: 'calibri';
+        text-align: left;
+        position:absolute;
+        color: red;
+        top: 900px;
+        margin-bottom: 16px;
+        padding-top: 20px;
+}
+
+/*---------------------------------Cliente-----------------------*/
+
+.NuestrosClientes{
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    background-color: rgb(15, 24, 110);
+}
+
+.contenedor{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.myDiapo {
+  display: inline;
+  margin-left: 200px;
+}
+.myDiapo img {
+    width: 550px;
+    height: 550px;
+    border-radius: 10px;
+  }
+
+.texto {
+  color:rgb(15, 24, 110);
+  font-size: 30px;
+  padding: 8px 0px;
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.puntos{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color:gray;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.GNCLIENTES {
+   position: relative;
+   margin-bottom: auto;
+    text-align: center;
+    font-size: 41px;
+    color: rgb(15, 24, 110);
+}
+
+.active, .puntos:hover {
+    background-color: rgb(15, 24, 110);
+  }
+
+
+
+ 

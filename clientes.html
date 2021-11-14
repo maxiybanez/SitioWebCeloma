@@ -1,0 +1,127 @@
+<!DOCTYPE HMTL>
+<HMTL lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <title>Celoma Tecnologia</title>
+    </head>
+<body>
+    <header>
+     
+    <ul class="menu">
+        <img src="imagenes\simbolo2.jpg"><h3>Celoma Tecnologia</h3>      
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li><a href="clientes.html">Clientes</a></li>
+        <li><a href="Contactos.html">Contacto</a></li>
+        <a class="facebook" href="https://www.facebook.com/celomatecnologia/"><img src="imagenes/icons8-facebook-48.png"></a>
+        <a class="facebook" href="https://www.instagram.com/celomatecnologia/"><img src="imagenes/icons8-instagram-48.png"></a>
+    </ul>  
+    
+</header>
+
+<div><p class="NuestrosClientes">Nuestros Clientes</p></div>
+
+    <div class="contenedor">
+
+        <div class="myDiapo">
+          
+          <img src="cliente\cliente1.png">
+          <div class="texto"> Club Atlético Juventud Unida Universitario</div>
+        </div>
+      
+        <div class="myDiapo">
+          
+          <img src="cliente\cliente2.png">
+          <div class="texto">Centro CER</div>
+        </div>
+      
+        <div class="myDiapo">
+          <img src="cliente\cliente3.png">
+          <div class="texto">MEDIGER</div>
+        </div>
+
+        <div class="myDiapo">
+            <img src="cliente\cliente4.png">
+            <div class="texto">ABERTURAS DE ALUMINIO</div>
+          </div>
+
+          <div class="myDiapo">
+            <img src="cliente\cliente5.png">
+            <div class="texto">CLUB G.E.P.U</div>
+          </div>
+
+          <div class="myDiapo">
+            <img src="cliente\gs.png">
+            <div class="texto">GS SPORTS</div>
+          </div>
+
+          <div class="myDiapo">
+            <img src="cliente\c6.png">
+            <div class="texto">LIGA SANLUISEÑA DE FUTBOL</div>
+          </div>
+
+          <div class="myDiapo">
+            <img src="cliente\g7.png">
+            <div class="texto">GRIS & GREY</div>
+          </div>
+
+          <div class="myDiapo">
+            <img src="cliente\g8.png">
+            <div class="texto">TOGETHER</div>
+          </div>
+      
+      <div style="text-align:center">
+        <span class="puntos" onclick="currentSlide(0)"></span>
+        <span class="puntos" onclick="currentSlide(1)"></span>
+        <span class="puntos" onclick="currentSlide(2)"></span>
+        <span class="puntos" onclick="currentSlide(3)"></span>
+        <span class="puntos" onclick="currentSlide(4)"></span>
+        <span class="puntos" onclick="currentSlide(5)"></span>
+        <span class="puntos" onclick="currentSlide(6)"></span>
+        <span class="puntos" onclick="currentSlide(7)"></span>
+        <span class="puntos" onclick="currentSlide(8)"></span>
+      </div>
+    </div>
+    <div class="GNCLIENTES">
+      <p>Gracias a nuestros clientes por la confianza colocada en nosotros.</p>
+    </div>
+
+
+  <script>
+        //debugger;   
+        var diapoIndex = 0;
+        mostrarImagen();
+
+        function mostrarImagen(n) {
+        var i;
+        var diapos = document.getElementsByClassName("myDiapo");
+        var puntos = document.getElementsByClassName("puntos");
+        for (i = 0; i < diapos.length; i++) {
+          diapos[i].style.display = "none";  
+        }
+        diapoIndex++;
+        if (n < 1 ) {
+          diapoIndex = diapos.length
+            }
+        if (diapoIndex > diapos.length || n > diapos.length) {
+          diapoIndex = 1
+        }    
+        for (i = 0; i < puntos.length; i++) {
+          puntos[i].className = puntos[i].className.replace(" active", "");
+        }
+        
+        diapos[diapoIndex-1].style.display = "block";  
+        puntos[diapoIndex-1].className += " active";
+        setTimeout(mostrarImagen, 2500); // tiempo en cambiar de imagenes
+      }
+
+       function currentSlide(n) {
+        diapoIndex = n;
+        }
+        
+    </script>
+
+</body>
+</html>
